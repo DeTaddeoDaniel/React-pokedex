@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 function App() {
 
@@ -16,7 +16,6 @@ function App() {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
         const data =  await res.json()
         setAllPokemons( currentList => [...currentList, data])
-        await console.log(allPokemons)
       })
     }
     
@@ -34,7 +33,21 @@ function App() {
       <h1>Pokedex</h1>
       <div className="pokemon-container">
         <div className="all-container">
-          
+
+          {/* prenditutti i pokemon in  allPokemons e mappali*/}
+           {allPokemons.map( (pokemonStats, index) => 
+
+            // per ogni pokemon array creati un componente
+            <li>
+
+              {/* passali data necessari per configurazione con promps */}
+              name={pokemonStats.name}
+
+            </li>
+
+
+            )}
+
         </div>
         <button className="load-more">Load more</button>
       </div>
