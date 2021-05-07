@@ -1,6 +1,7 @@
-
+// importa react
 import React from 'react'
 
+// variabili per inizializzazione componente
 const PokemonThumb = ({id, image, name, type, _callback }) => {
     
     // string = type pokemon + classe thumb-container 
@@ -26,7 +27,7 @@ const PokemonThumb = ({id, image, name, type, _callback }) => {
 
                 {/* tipologia pokemon */}
                 <small>Type: {type}</small>
-                
+
             </div>
         </div>
     )
