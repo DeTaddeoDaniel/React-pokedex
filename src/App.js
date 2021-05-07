@@ -67,7 +67,15 @@ function App() {
            )}
 
         </div>
-        <button className="load-more">Load more</button>
+
+        {/* click sul pulsante, creando una funzione anomina */}
+        <button className="load-more" onClick={ 
+          ()=> {
+            // richiama nuovi pokemon
+            getAllPokemons()
+          }
+        }>Load more</button>
+
       </div>
     </div>
   );
